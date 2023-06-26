@@ -25,7 +25,7 @@ public class MathUtilityAdvancedTest {
                                {1, 1}, 
                                {2, 2}, 
                                {3, 6}, 
-                               {5, 1200}};
+                               {5, 120}};
         return testData;
     }
 // nhồi data vào hàm assertE()

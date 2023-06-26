@@ -18,19 +18,31 @@ public class MathUtility {
     //giai thừa tăng nhanh, 20! vừa khớp full kiểu long
     //do đó 21! không dùng kiểu long được. nếu đưa > 21, chửi 
     //chửi: không trả về giá trị gì cả mà ném ra ngoại lệ exception
+//    public static long getFactorial(int n) {
+//        
+//        if (n < 0 || n > 20) throw new IllegalArgumentException("Invalid n. n must be between 0..20");
+//        if (n == 0 || n == 1) {
+//            return 1;
+//        }
+//        long  product = 1;// tích nhân dồn khởi động từ 1
+//        
+//        for (int i = 2; i <= n; i++) {
+//            product *= i;
+//        }
+//        return product;
+//    }
+    
     public static long getFactorial(int n) {
         
         if (n < 0 || n > 20) throw new IllegalArgumentException("Invalid n. n must be between 0..20");
         if (n == 0 || n == 1) {
             return 1;
         }
-        long  product = 1;// tích nhân dồn khởi động từ 1
         
-        for (int i = 2; i <= n; i++) {
-            product *= i;
-        }
-        return product;
+        return n*getFactorial(n-1);
+        //công thức đệ quy - RECURSION
     }
+
 }
 
 //TDD: Test Driven Development(phát triển phần mềm theo phong cách
